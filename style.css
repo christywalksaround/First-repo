@@ -1,0 +1,38 @@
+body{
+        font-family: Arial, sans-serif;
+        background-color:rgb(213, 194, 187);
+        text-align: center;
+        margin-top: 0px;
+        padding: 40px 20px;
+    }
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 20px;   
+    }
+    .green{
+        background-color: green;
+        color:black;
+    }
+
+    .purple{
+        background-color: purple;
+        color:white;
+    }
+    .bluebonnet{
+        background-color: #3B4CCA;
+        color:yellow;
+    }
+    ul{
+        list-style-type: disc;
+        color: black;
+        display:inline-block;
+        text-align: left;
+    }
+    img {
+        width: 250px;
+    }
+    .hidden {
+        display: none;
+    }
