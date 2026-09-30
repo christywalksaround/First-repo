@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<title>Self-Introduction</title>
+
+    </style>
+    </head>
+    <body>
+        <div id="page1">
+        <h1>Hi, y'all!</h1>
+        <button class="green" onclick="nextPage('page1', 'page2')">Click me</button></div>
+
+        <div id="page2" class="hidden">
+        <h1>My name is Christina.</h1>
+        <button class="purple" onclick="nextPage('page2', 'page3')">Click me</button>
+      </div>
+
+      <div id="page3" class="hidden">
+        <h1>I am from Houston, Texas.</h1>
+        <button class="bluebonnet" onclick="nextPage('page3', 'page4')">Click me</button>
+      </div>    
+
+      <div id="page4" class="hidden">
+        <h1>Job Prospects</h1>
+        <ul>
+        <li>E-learning Developer</li>
+        <li>Front-End Developer</li>
+        <li>Curriculum/Content Developer</li>
+        </ul>
+        <br>
+        <button class="green" onclick="nextPage('page4', 'page5')">Click me</button>
+        </div>
+
+        <div id="page5" class="hidden">
+        <h1>My Links and Work</h1>
+
+        <p>
+        <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/christywalksaround" target="_blank">GitHub</a>
+        </p>
+
+        <h2>My CodeSquad Mini Course Assignments</h2>
+        <img src="" alt="Assignment 1">
+        <img src="" alt="Assignment 2">
+        <img src="" alt="Assignment 3">
+
+        <h2>A Place I Would Like To Travel</h2>
+        <p>Saudi Arabia</p>
+        </div>
+        <script>
+  function P(currentId, nextId) {
+    // Wait, let's name it nextPage:
+  }
+  function nextPage(currentId, nextId) {
+    document.getElementById(currentId).classList.add('hidden');
+    document.getElementById(nextId).classList.remove('hidden');
+  }
+</script>
+
+        </body>
+        </html>
