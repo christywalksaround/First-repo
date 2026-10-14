@@ -11,18 +11,18 @@
             margin: 40px auto;
             padding: 0 16px;
         }
-        #WhyList {
+        #list {
             list-style: none;
             padding: 0;
         }
-        #WhyList li {
+        #list li {
             display: flex;
             align-items: center;
             gap: 8px;
             padding: 8px 0;
             border-bottom: 1px solid #ddd;
         }
-        #WhyList li span {
+        #list li span {
             flex: 1;
         }
     </style>
@@ -30,54 +30,42 @@
 <body>
     <h1>Reasons Why You Are Great</h1>
 
-    <input type="text" id="taskInput" placeholder="Enter a task">
+    <input type="text" id="taskInput" placeholder="Enter a reason">
     <button onclick="addTask()">Add Task</button>
 
-    <ul id="WhyList"></ul>
+    <ul id="list"></ul>
 
     <script>
-        // Function to add a task
         function addTask() {
             const input = document.getElementById("taskInput");
             const taskText = input.value.trim();
 
             if (taskText !== "") {
-                const ul = document.getElementById("WhyList");
-
-                // Create new list item
+                const ul = document.getElementById("list");
                 const li = document.createElement("li");
 
-                // Create task text element
                 const span = document.createElement("span");
                 span.textContent = taskText;
 
-                // Create edit button
                 const editButton = document.createElement("button");
                 editButton.textContent = "Edit";
                 editButton.onclick = () => editTask(span);
 
-                // Create remove button
                 const removeButton = document.createElement("button");
                 removeButton.textContent = "Delete";
                 removeButton.onclick = () => removeTask(li);
 
-                // Append buttons and text to the list item
                 li.appendChild(span);
                 li.appendChild(editButton);
                 li.appendChild(removeButton);
-
-                // Append list item to the list
                 ul.appendChild(li);
 
-                // Clear the input field
                 input.value = "";
-            }
-            else {
+            } else {
                 alert("Please enter a valid task.");
             }
         }
 
-        // Edit a task's text
         function editTask(span) {
             const newText = prompt("Edit your task:", span.textContent);
             if (newText !== null && newText.trim() !== "") {
@@ -85,7 +73,6 @@
             }
         }
 
-        // Remove a task from the list
         function removeTask(li) {
             li.remove();
         }
