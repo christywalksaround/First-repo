@@ -33,7 +33,7 @@
     <input type="text" id="taskInput" placeholder="Enter a task">
     <button onclick="addTask()">Add Task</button>
 
-    <ul id="whyyouaregreat"></ul>
+    <ul id="whyList"></ul>
 
     <script>
         // Function to add a task
@@ -42,7 +42,7 @@
             const taskText = input.value.trim();
 
             if (taskText !== "") {
-                const ul = document.getElementById("todoList");
+                const ul = document.getElementById("WhyList");
 
                 // Create new list item
                 const li = document.createElement("li");
